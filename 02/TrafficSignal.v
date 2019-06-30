@@ -55,11 +55,11 @@ module TrafficSignal(CLK, RST, CLED);
     always @(posedge CLK) begin
         if(RST == 1) cnt_clock <= 0;
         else begin
-            if(cnt_clock >= CLK_FREQ / 1000) cnt_clock <= 0;
+            if(cnt_clock >= CLK_FREQ / 1000 - 1) cnt_clock <= 0;
             else cnt_clock <= cnt_clock + 1;
         end
     end
-    assign is_clk_max = (cnt_clock == CLK_FREQ / 1000);
+    assign is_clk_max = (cnt_clock == CLK_FREQ / 1000 - 1);
     
     // 状態変更部
     always @(posedge CLK) begin
