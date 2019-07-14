@@ -1,7 +1,14 @@
 = make-riscv
 
 == Description
-TBD
+=== Day 1
+Old and good led blink program.
+
+=== Day 2
+State machine
+
+=== Day 3
+Using modules
 
 == License
 Licensed under The MIT License
